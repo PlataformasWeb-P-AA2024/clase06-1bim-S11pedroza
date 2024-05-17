@@ -14,7 +14,7 @@ Base = declarative_base()
 
 
 from sqlalchemy import Column, Integer, String
-
+# el base como es la superclase permite en agregar nombrar las variables
 class Docente(Base):
 
     __tablename__ = 'docentes'
@@ -24,7 +24,9 @@ class Docente(Base):
     apellido = Column(String(200))
     ciudad = Column(String(200), nullable=False) # este atributo no puede ser nulo
 
-
+# esta funcion es para utilizar el atributo self que permite hacer referencia a mi mismo
+#para hacer referencia a la variable que se declaro se usa self
+# repr es el tostring
     def __repr__(self):
         return "Docente: nombre=%s apellido=%s ciudad:%s" % (
                           self.nombre,
