@@ -43,6 +43,7 @@ conn.commit()
 cadena_consulta_sql = "SELECT * from Autor"
 cursor.execute(cadena_consulta_sql)
 # la información resultante se la obtiene del método fetchall de cursor.
+# fetchall saca todo lo que tenga en sql previo
 informacion = cursor.fetchall()
 
 # se realiza un ciclo repetitivo para recorrer la secuencia de información
