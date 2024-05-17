@@ -21,9 +21,12 @@ informacion = cursor.fetchall()
 
 # se realiza un ciclo repetitivo para recorrer la secuencia de información
 # resultante
+# solo esta leyengo el nombre y la edad con la iteracion d
 for d in informacion:
     print("El nombre es: %s y la edad es: %d" %(d[0], d[3]))
 #    print("%s - %s - %s - %d" % (d[0], d[1], d[2], d[3]))
 
 # cerrar el enlace a la base de datos (recomendado)
 cursor.close()
+
+
